@@ -1,7 +1,6 @@
-from flask import Flask
+import random
 
-app = Flask(__name__)
+def player():
+    print(random.randint(0,100))
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+player()
