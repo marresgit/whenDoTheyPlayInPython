@@ -1,0 +1,20 @@
+name: Deploy Python Lambda
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ AWS_SECRET_ACCESS_KEY }}
+
+    steps:
+      - uses: action/terraform ## something like this i guess
+      - name: Test terraform
+        run: terraform init
