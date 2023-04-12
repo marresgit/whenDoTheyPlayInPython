@@ -14,7 +14,6 @@ jobs:
     steps:
       - name: "Checkout the project"
         uses: actions/checkout@v3
-        working-directory: ./infra
       - name: "Configure AWS Credentials Action For GitHub Actions"
         uses: aws-actions/configure-aws-credentials@v2
         with:
@@ -34,6 +33,7 @@ jobs:
         id: validate
         run: terraform validate -no-color
       - name: "Terraform plan"
+        working-directory: ./infra
         id: plan
         run: terraform -chdir=infra plan
 
