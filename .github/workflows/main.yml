@@ -35,7 +35,7 @@ jobs:
       - name: "Terraform plan"
         working-directory: ./infra
         id: plan
-        run: terraform -chdir=infra plan
+        run: terraform plan
 
 
 
