@@ -12,7 +12,6 @@ provider "aws" {
   region = "us-east-1"
 }
 
-
 #data "archive_file" "lambda" {
 #  type        = "zip"
 #  source_file = "whenDoTheyPlay.py"
