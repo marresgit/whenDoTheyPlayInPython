@@ -12,11 +12,11 @@ provider "aws" {
   region = "us-east-1"
 }
 
-
 resource "aws_s3_bucket" "marre-terraform-test" {
   bucket = "my-tf-test-bucket"
 }
 
+# TODO: send state file to bucket from commandline. THEN do this ^
 
 #data "archive_file" "lambda" {
 #  type        = "zip"
