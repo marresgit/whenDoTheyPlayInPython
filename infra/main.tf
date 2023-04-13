@@ -2,8 +2,8 @@
 terraform {
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.62.0"
+      source = "hashicorp/aws"
+      version = "~> 4.0"
     }
   }
 }
@@ -11,6 +11,12 @@ terraform {
 provider "aws" {
   region = "us-east-1"
 }
+
+
+resource "aws_s3_bucket" "marre-terraform-test" {
+  bucket = "my-tf-test-bucket"
+}
+
 
 #data "archive_file" "lambda" {
 #  type        = "zip"
