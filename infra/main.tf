@@ -6,15 +6,19 @@ terraform {
       version = "~> 4.0"
     }
   }
+
+  backend "s3" {
+    bucket         = "marre-test-bucket-gitactions"
+    key            = "terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+  }
 }
 
 provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_s3_bucket" "marre-terraform-test" {
-  bucket = "my-tf-test-bucket"
-}
 
 # TODO: send state file to bucket from commandline. THEN do this ^
 
