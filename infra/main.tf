@@ -2,15 +2,15 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "~> 4.0"
     }
   }
 
   backend "s3" {
-    bucket         = "marre-test-bucket-gitactions"
-    key            = "terraform.tfstate"
-    region         = "us-east-1"
+    bucket = "marre-test-bucket-gitactions"
+    key    = "terraform.tfstate"
+    region = "us-east-1"
   }
 }
 
