@@ -39,6 +39,11 @@ jobs:
         working-directory: ./infra
         id: plan
         run: terraform plan
+      - name: "Terraform apply"
+        working-directory: ./infra
+        id: apply
+        run: terraform apply
+
 
 
 
