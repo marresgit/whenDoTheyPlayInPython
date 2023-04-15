@@ -24,12 +24,15 @@ jobs:
         uses: hashicorp/setup-terraform@v2.0.3
 
       - name: "Terraform format - (check if terraform config is proper formatted)"
+        working-directory: ./infra
         id: fmt
         run: terraform fmt -check
       - name: "Terraform init"
+        working-directory: ./infra
         id: init
         run: terraform init
       - name: "Terraform Validate"
+        working-directory: ./infra
         id: validate
         run: terraform validate -no-color
       - name: "Terraform plan"

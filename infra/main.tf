@@ -11,13 +11,14 @@ terraform {
     bucket         = "marre-test-bucket-gitactions"
     key            = "terraform.tfstate"
     region         = "us-east-1"
-    encrypt        = true
   }
 }
 
 provider "aws" {
   region = "us-east-1"
 }
+
+
 
 
 # TODO: send state file to bucket from commandline. THEN do this ^
