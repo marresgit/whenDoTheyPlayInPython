@@ -48,7 +48,7 @@ data "archive_file" "marre_zip_the_python_file" {
 resource "aws_lambda_function" "marre_test_lambda" {
   # If the file is not in the current working directory you will need to include a
   # path.module in the filename.
-  filename      = "${path.module}/app/lambda_function_payload.zip"
+  filename      = "${path.module}/app/whenDoTheyPlay.zip"
   function_name = "marre_lambda_function_name"          #
   role          = aws_iam_role.marre_iam_for_lambda.arn # This wants the resource "aws_iam_role"
   handler       = "whenDoTheyPlay.player"               # [name of file].[name of def]
