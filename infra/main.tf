@@ -41,8 +41,8 @@ resource "aws_iam_role" "marre_iam_for_lambda" {
 
 data "archive_file" "marre_zip_the_python_file" {
   type        = "zip"
-  source_file = "${path.module}/app/whenDoTheyPlay.py"
-  output_path = "${path.module}/app/whenDoTheyPlay.zip"
+  source_file = "../app/whenDoTheyPlay.py"
+  output_path = "../app/whenDoTheyPlay.zip"
 }
 
 #resource "aws_lambda_function" "marre_test_lambda" {
