@@ -42,7 +42,7 @@ jobs:
       - name: "Terraform apply"
         working-directory: ./infra
         id: apply
-        run: terraform apply
+        run: terraform apply -auto-approve
 
 
 
