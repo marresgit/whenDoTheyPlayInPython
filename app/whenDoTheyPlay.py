@@ -1,6 +1,7 @@
 import random
 
-def player(number):
-    print(random.randint(0,{}).format(number))
-
-player()
+def player(event, context):
+    message = "Hello {}!".format(event['key1'])
+    return {
+        'message' : message
+    }
