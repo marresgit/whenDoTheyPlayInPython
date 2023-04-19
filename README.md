@@ -1,10 +1,9 @@
 # whenDoTheyPlayInPython
-This is going into an Azure function. Using terraform and github actions
 
-# TODO:     Do a terraform apply if there is an green "plan"
+### What are we doing here:
+1. Build azure function with terraform.
+2. Update function when we update python script - with github acitons
 
-
- 
 
 
 Im going through this guide: https://developer.hashicorp.com/terraform/tutorials/automation/github-actions
