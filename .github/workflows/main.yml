@@ -48,6 +48,9 @@ jobs:
         run: terraform apply -auto-approve
 
 
+jobs:
+  deploy
+
 
 
         env:
