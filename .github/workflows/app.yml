@@ -1,4 +1,4 @@
-name: Deploy when we change app python script
+name: Deploy app (python script)
 on:
   push:
     branch:

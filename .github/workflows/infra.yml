@@ -1,4 +1,4 @@
-name: Deploy aws lambda with terraform
+name: Deploy infra (terraform)
 on:
   push:
     branches:
