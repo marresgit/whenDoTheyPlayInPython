@@ -1,4 +1,4 @@
-name: Deploy Python Lambda
+name: Deploy aws lambda with terraform
 on:
   push:
     branches:
@@ -7,7 +7,7 @@ on:
       - 'infra/**'
 jobs:
   deploy:
-    name: deploy
+    name: Deploy infra with terraform
     runs-on: ubuntu-latest
 
     steps:
