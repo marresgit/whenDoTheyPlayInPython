@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - 'infra/**'
+      - '.github/workflows/infra.yml'
 jobs:
   deploy:
     name: Deploy infra with terraform
