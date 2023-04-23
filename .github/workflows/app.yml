@@ -11,5 +11,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: "hello world"
-        run: echo "Hello World"
+      - name: "Checkout source code"
+        uses: actions/checkout@v3
+      - name: "Default deploy"
+        uses: appleboy/lambda-action@v0.1.9
+        with:
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_region: ${{ secrets.AWS_REGION }}
+          function_name: marre_lambda_function_name
+          source: app/whenDoTheyPlay.py

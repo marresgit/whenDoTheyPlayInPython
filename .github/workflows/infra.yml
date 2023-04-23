@@ -21,10 +21,6 @@ jobs:
           aws-region: us-west-2
       - name: "Setup Terraform CLI"
         uses: hashicorp/setup-terraform@v2.0.3
-
-      - name: "What in the dir"
-        run: find .
-
       - name: "Terraform format - (check if terraform config is proper formatted)"
         working-directory: ./infra
         id: fmt
